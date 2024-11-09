@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background-color: #80a9ff;
+}
+
+.display {
+    text-align: right;
+    font-size: 24px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #d9ecff;
+    border: none;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    font-size: 18px;
+    padding: 12px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background-color: #007bff;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button.operator {
+    background-color: #00aaff;
+}
+
+button.operator:hover {
+    background-color: #0086c3;
+}
+
+button.equal {
+    background-color: #009933;
+    grid-column: span 2;
+}
+
+button.equal:hover {
+    background-color: #006600;
+}
+
+/* Адаптивные стили */
+@media screen and (max-width: 500px) {
+    .calculator {
+        width: 90%; /* Калькулятор займет 90% ширины экрана */
+    }
+    
+    .display {
+        font-size: 16px; /* Уменьшаем размер шрифта дисплея */
+    }
+    
+    button {
+        font-size: 14px; /* Уменьшаем размер текста на кнопках */
+        padding: 8px; /* Уменьшаем отступы вокруг текста */
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .calculator {
+        width: 95%; /* Еще больше увеличиваем ширину калькулятора */
+    }
+    
+    .display {
+        font-size: 12px; /* Минимальный размер шрифта дисплея */
+    }
+    
+    button {
+        font-size: 10px; /* Минимальный размер текста на кнопках */
+        padding: 6px; /* Минимальные отступы вокруг текста */
+    }
+}
